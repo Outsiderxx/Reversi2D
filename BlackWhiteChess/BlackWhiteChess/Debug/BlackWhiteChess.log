@@ -1,0 +1,10 @@
+﻿  GameBoard.cpp
+d:\my file\code\c++\blackwhitechess\blackwhitechess\gameboard.cpp(265): warning C4805: '==': 作業中不安全的混用類型 '_Ty' 和類型 'bool'
+          with
+          [
+              _Ty=int
+          ]
+  Print.cpp
+  main.cpp
+  正在產生程式碼...
+  BlackWhiteChess.vcxproj -> D:\My file\Code\C++\BlackWhiteChess\Debug\BlackWhiteChess.exe

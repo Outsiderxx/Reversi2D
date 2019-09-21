@@ -147,6 +147,11 @@
     <ClInclude Include="GameBoard.h" />
     <ClInclude Include="Print.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Electro_Cabello.wav" />
+    <Media Include="Quiet.wav" />
+    <Media Include="Russian_Dance.wav" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

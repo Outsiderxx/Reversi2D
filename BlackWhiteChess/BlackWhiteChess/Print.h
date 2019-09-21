@@ -1,6 +1,8 @@
 #include <Windows.h>
 #include <iostream>
 #include <string>
+#include <mmsystem.h>		
+#pragma comment(lib, "winmm.lib")	
 using namespace std;
 
 void printBasic();

@@ -5,68 +5,88 @@
 
 int main() {
 
-	GameBoard game;
-
-	int toDo = 0, previous;
-
-	printMenu();
+	system("mode con cols=118 lines=30");
 
 	while (true) {
 
-		if (_kbhit()) {
+		PlaySound(TEXT("Russian_Dance.wav"), NULL, SND_ASYNC | SND_NODEFAULT | SND_LOOP);
 
-			int input = _getch();
+		GameBoard game;
 
-			if (input == 224) {
+		bool leave = false;
 
-				input = _getch();
+		int toDo = 0, previous;
 
-				previous = toDo;
+		printMenu();
 
-				if (input == 72) {
+		while (true) {
 
-					toDo = toDo == 0 ? 3 : toDo - 1;
+			if (_kbhit()) {
 
-				}
-				else if (input == 80) {
+				int input = _getch();
 
-					toDo = toDo == 3 ? 0 : toDo + 1;
+				if (input == 224) {
 
-				}
+					input = _getch();
 
-				changePointTo(48, 66, 17, toDo, previous);
+					previous = toDo;
 
-			}
-			else if (input == 13) {
+					if (input == 72) {
 
-				if (toDo == 0) {
+						toDo = toDo == 0 ? 3 : toDo - 1;
 
-					game.gameStart(0);
+					}
+					else if (input == 80) {
 
-				}
-				else if (toDo == 1) {
-
-					game.gameStart(1);
-
-				}
-				else if (toDo == 2) {
-
-					if (game.selfDefine()) {
-
-						game.gameStart(2);
+						toDo = toDo == 3 ? 0 : toDo + 1;
 
 					}
 
-				}
-				else {
+					changePointTo(48, 66, 17, toDo, previous);
 
-					printExit();
+				}
+				else if (input == 13) {
+
+					if (toDo == 0) {
+
+						game.gameStart(0);
+
+					}
+					else if (toDo == 1) {
+
+						game.gameStart(1);
+
+					}
+					else if (toDo == 2) {
+
+						if (game.selfDefine()) {
+
+							game.gameStart(2);
+
+						}
+
+					}
+					else if (toDo == 3) {
+
+						leave = true;
+
+					}
 
 					break;
 
 				}
 
 			}
+
+		}
+
+		PlaySound(TEXT("Quiet.mp3"), NULL, SND_ASYNC | SND_NODEFAULT | SND_LOOP);
+
+		if (leave) {
+
+			printExit();
+
+			break;
 
 		}
 

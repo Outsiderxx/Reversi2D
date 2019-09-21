@@ -2,9 +2,139 @@
 
 void printBasic() {
 
+	system("cls");
+
+	system("color 0f");
+
+	goTo(5, 2);
+
+	cout << "玩 家 一 ( 黑 棋 )";
+
+	goTo(95, 2);
+
+	cout << "玩 家 二 ( 白 棋 )";
+
+	goTo(55, 2);
+
+	cout << "比   數";
+
+	goTo(49, 4);
+
+	cout << "○       :       ●";
+
+	goTo(3, 14);
+
+	cout << "說 明";
+
+	goTo(0, 16);
+
+	cout << "  = = = = = = = = = = = = = = = =";
+
+	goTo(86, 14);
+
+	cout << "戰 況";
+
+	goTo(85, 16);
+
+	cout << "= = = = = = = = = = = = = = = =  ";
+
+	goTo(3, 18);
+
+	cout << "控制游標 : ↑←↓→";
+
+	goTo(3, 20);
+
+	cout << "開啟提示 : 'h'";
 	
+	goTo(3, 22);
 
+	cout << "悔棋 : 'u', 三次機會";
 
+	goTo(3, 24);
+
+	cout << "取消悔棋 : 'r'";
+
+	goTo(3, 26);
+
+	cout << "重新開始 : 's'";
+
+	goTo(3, 28);
+
+	cout << "投降 : 'e'";
+
+	goTo(15, 28);
+
+	cout << "技能 : 'g', 搶奪敵方一個旗子";
+
+	goTo(46, 8);
+
+	cout << "  a  b  c  d  e  f  g  h ";
+
+	goTo(45, 9);
+
+	cout << "1                         1";
+
+	goTo(46, 10);
+	 
+	cout << "   +  +  +  +  +  +  +   ";
+
+	goTo(45, 11);
+
+	cout << "2                         2";
+
+	goTo(46, 12);
+
+	cout << "   +  +  +  +  +  +  +   ";
+
+	goTo(45, 13);
+
+	cout << "3                         3";
+
+	goTo(46, 14);
+
+	cout << "   +  +  +  +  +  +  +   ";
+
+	goTo(45, 15);
+
+	cout << "4                         4";
+
+	goTo(46, 16);
+
+	cout << "   +  +  +  +  +  +  +   ";
+
+	goTo(45, 17);
+
+	cout << "5                         5";
+
+	goTo(46, 18);
+
+	cout << "   +  +  +  +  +  +  +   ";
+
+	goTo(45, 19);
+
+	cout << "6                         6";
+
+	goTo(46, 20);
+
+	cout << "   +  +  +  +  +  +  +   ";
+
+	goTo(45, 21);
+
+	cout << "7                         7";
+
+	goTo(46, 22);
+
+	cout << "   +  +  +  +  +  +  +   ";
+
+	goTo(45, 23);
+
+	cout << "8                         8";
+
+	goTo(46, 24);
+
+	cout << "  a  b  c  d  e  f  g  h ";
+
+	goTo(117, 29);
 
 }
 
@@ -21,8 +151,6 @@ void goTo(int x, int y) {
 }
 
 void printMenu() {
-		
-	system("mode con cols=118 lines=30");
 
 	system("cls");
 
@@ -82,6 +210,8 @@ void printMenu() {
 
 void printExit() {
 
+	PlaySound(TEXT("Electro_Cabello.wav"), NULL, SND_ASYNC | SND_NODEFAULT | SND_LOOP);
+
 	system("cls");
 
 	// "http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20" ASCII art 字型產生器
@@ -120,7 +250,7 @@ void printExit() {
                                                                    
 	goTo(117, 29);
 
-	Sleep(2000);
+	Sleep(5000);
 
 }
 
@@ -145,3 +275,4 @@ void changePointTo(int startX,int endX, int y, int curIndex, int preIndex) {
 	goTo(117, 29);
 
 }
+

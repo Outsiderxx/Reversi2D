@@ -1,5 +1,9 @@
 #include <vector>
 #include <conio.h>
+#include <iomanip>
+#include <cmath>
+#include <time.h>
+#include "print.h"
 using namespace std;
 
 class GameBoard {
@@ -10,7 +14,7 @@ public:
 
 	void gameStart(int mode);
 
-	int gameOver();
+	void gameOver();
 
 	void log();
 
@@ -20,21 +24,13 @@ public:
 
 	bool isPass(bool turn);
 
-	bool up();
-
-	bool down();
-
-	bool left();
-
-	bool right();
-
 	void deal();
 
-	void printBoard();
+	void printGameInfo();
 
-	int regret();
+	void regret();
 
-	bool redo();
+	void redo();
 
 	void replay();
 
@@ -42,13 +38,9 @@ public:
 
 	bool selfDefine();
 
-	bool getTurn();
+	void skill();
 
-	void setTurn(bool turn);
-
-	int getX();
-
-	int getY();
+	void message();
 
 private:
 
@@ -62,6 +54,8 @@ private:
 
 	int x, y;
 
+	int winner;
+
 	int blackNum;
 
 	int whiteNum;
@@ -70,8 +64,20 @@ private:
 
 	int whiteChance;
 
+	int blackTurn;
+
+	int whiteTurn;
+
+	vector<vector<vector<int>>> tmpBoard;
+
+	vector<vector<int>> selfDefineBoard;
+
 	vector<vector<int>> board;
 
 	vector<vector<vector<int>>> gameRecord;
+
+	vector<string> messageBox;
+
+	vector<string> tmpMessageBox;
 
 };

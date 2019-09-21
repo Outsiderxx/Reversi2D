@@ -33,4 +33,15 @@
       <Filter>標頭檔</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="Electro_Cabello.wav">
+      <Filter>資源檔</Filter>
+    </Media>
+    <Media Include="Quiet.wav">
+      <Filter>資源檔</Filter>
+    </Media>
+    <Media Include="Russian_Dance.wav">
+      <Filter>資源檔</Filter>
+    </Media>
+  </ItemGroup>
 </Project>

@@ -1187,7 +1187,7 @@ void GameBoard::printGameInfo() {
 
 void GameBoard::regret() {
 
-	if (gameRecord.size() < 2 || (turn && whiteChance == 0) || (!turn && blackChance == 0)) {
+	if (gameRecord.size() < 3 || (turn && whiteChance == 0) || (!turn && blackChance == 0)) {
 
 		if (turn) {
 		

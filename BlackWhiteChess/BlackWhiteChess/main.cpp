@@ -80,8 +80,6 @@ int main() {
 
 		}
 
-		PlaySound(TEXT("Quiet.mp3"), NULL, SND_ASYNC | SND_NODEFAULT | SND_LOOP);
-
 		if (leave) {
 
 			printExit();

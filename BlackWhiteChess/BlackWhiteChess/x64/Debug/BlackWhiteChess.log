@@ -1,2 +1,4 @@
-﻿  Print.cpp
+﻿  GameBoard.cpp
+d:\my file\github\reversi2d\blackwhitechess\blackwhitechess\gameboard.cpp(55): warning C4244: '引數': 將 'time_t' 轉換為 'unsigned int'，由於類型不同，可能導致資料遺失
+d:\my file\github\reversi2d\blackwhitechess\blackwhitechess\gameboard.cpp(1704): warning C4267: '正在初始化': 將 'size_t' 轉換為 'int'，資料可能遺失
   BlackWhiteChess.vcxproj -> D:\My file\Github\Reversi2D\BlackWhiteChess\x64\Debug\BlackWhiteChess.exe
